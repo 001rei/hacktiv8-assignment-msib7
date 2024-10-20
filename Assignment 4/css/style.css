@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    font-family: "Roboto Mono", monospace;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+img:hover {
+    filter: none;
+}
+
+.text-mono {
+    font-family: "Roboto Mono", monospace;
+}
+
+.text-mono-36 {
+    font-size: 36px;
+    line-height: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+}
+
+.text-mono-link {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+    font-size: 12px;
+    color: inherit;
+    background-color: rgb(214, 208, 208);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.text-mono-link:hover {
+    background-color: rgb(158, 218, 69) !important;
+}
+
+.text-serif-16 {
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+}

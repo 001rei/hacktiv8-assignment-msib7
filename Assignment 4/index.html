@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <div class="container-sm py-2 px-5 my-5">
+        
+        <div class="row justify-content-center align-items-center">
+            
+            <div class="col-lg-8">
+                <div class="pt-5">
+                    <div class="d-flex gap-3">
+                        <p id="name" class="text-mono-36"></p>
+                        <span id="age" class="fs-4 text-mono"></span>
+                    </div>
+                    <p id="role" class="text-mono fs-6"></p>
+                </div>
+                <div id="socials" class="d-flex gap-2 flex-wrap">
+                    <!-- isi medsos yang dipunya -->
+                </div>
+                <div class="mt-4 me-5 pe-5">
+                    <p id="description" class="text-serif-16">
+                        <!-- deskripsi -->
+                    </p>
+                </div>
+
+                <!-- modal button -->
+                <button id="editBtn" type="button" class="btn btn-outline-secondary btn-sm px-5 text-mono mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Edit
+                </button>
+                
+                <!-- modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <form>
+                                    <!-- nama -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="form-name" placeholder="Enter your name" required>
+                                    </div>
+                
+                                    <!-- umur -->
+                                    <div class="mb-3">
+                                        <label for="age" class="form-label">Age</label>
+                                        <input type="number" class="form-control" id="form-age" placeholder="Enter your age" required>
+                                    </div>
+                
+                                    <!-- role -->
+                                    <div class="mb-3">
+                                        <label for="role" class="form-label">Role</label>
+                                        <input type="text" class="form-control" id="form-role"
+                                            placeholder="Enter your role (e.g. Developer, Designer)" required>
+                                    </div>
+                
+                                    <!-- media sosial -->
+                                    <div class="mb-3">
+                                        <label for="socialMedia" class="form-label">Social Media</label>
+                                        <div id="social-media-fields">
+                                            <div class="input-group mb-2">
+                                                <input type="text" class="form-control" name="socialMedia[]" placeholder="Enter social media">
+                                                <button class="btn btn-outline-danger remove-field" type="button">Remove</button>
+                                            </div>
+                                        </div>
+                                        <button id="add-social-media" type="button" class="btn btn-outline-success mt-2">Add More</button>
+                                    </div>
+                
+                                    <!-- deskripsi -->
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="form-description" rows="3"
+                                            placeholder="Tell us more about yourself"></textarea>
+                                    </div>
+                
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                <img src="img/pic.jpg" class="img-fluid grayscale rounded" alt="photo profile">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+     <script src="js/script.js"></script>
+     <script src="js/dynamicInput.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
