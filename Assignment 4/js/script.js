@@ -187,6 +187,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // masukkan list medsos ke array
         const arraySocials = Array.from(socials).map(social => social.value);
+
+        // validasi field
+        if (!name || !age || !role || !desc || arraySocials.some(social => !social)) {
+            alert('All fields are required!');
+            return; 
+        }
         
         localStorage.setItem('name', name);
         localStorage.setItem('age', age);
